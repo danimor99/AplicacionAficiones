@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+
+    >
+
+    <TextView
+        android:id="@+id/textwukong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#ffffff"
+        android:text="Black Myth: Wukong"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134" />
+
+    <TextView
+        android:id="@+id/textwukong2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="156dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/white"
+        android:text="Black Myth: Wukong es un juego de rol de acción, con elementos soulslike.4​5​6​Está basado en la clásica novela china del siglo XVI Viaje al Oeste.7​8​9​
+
+El jugador controla a un mono como protagonista, el cual es denominado como El Elegido, y quien se basa en el personaje de la novela original Sun Wukong.10​6​ El protagonista utiliza un bastón como arma, el cual se basa en el bastón mágico Ru Yi Bang de la novela y que puede contraerse y extenderse en combate."
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="183dp"
+        android:layout_height="238dp"
+        app:srcCompat="@drawable/blackmyth"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="304dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
