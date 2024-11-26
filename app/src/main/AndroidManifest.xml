@@ -11,37 +11,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aficiones"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".Login"
+            android:exported="true"
+            android:label="@string/title_activity_login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    <activity
-        android:name=".Aficiones"
-        android:exported="true"
-        android:label="@string/title_activity_aficiones" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Aficiones"
+            android:exported="true"
+            android:label="@string/title_activity_aficiones" />
 
-    <activity
-        android:name=".TiposVideojuegos"
-        android:exported="false"
-        android:label="TiposVideojuegos" >
-
-    </activity>
-    <activity
-        android:name=".TiposFPS"
-        android:exported="false"
-        android:label="TiposFPS" >
-
-    </activity>
-    <activity
-        android:name=".TiposAccion"
-        android:exported="false"
-        android:label="TiposAccion" >
-
-    </activity>
-
-</application>
+        <activity
+            android:name=".TiposVideojuegos"
+            android:exported="false"
+            android:label="TiposVideojuegos" />
+        <activity
+            android:name=".TiposFPS"
+            android:exported="false"
+            android:label="TiposFPS" />
+        <activity
+            android:name=".TiposAccion"
+            android:exported="false"
+            android:label="TiposAccion" />
+    </application>
 
 </manifest>

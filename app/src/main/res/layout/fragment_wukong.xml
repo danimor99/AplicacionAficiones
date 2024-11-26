@@ -38,6 +38,7 @@ El jugador controla a un mono como protagonista, el cual es denominado como El E
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="183dp"
@@ -45,5 +46,6 @@ El jugador controla a un mono como protagonista, el cual es denominado como El E
         app:srcCompat="@drawable/blackmyth"
         tools:layout_editor_absoluteX="105dp"
         tools:layout_editor_absoluteY="304dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
