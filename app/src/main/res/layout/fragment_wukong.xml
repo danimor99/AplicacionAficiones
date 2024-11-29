@@ -40,12 +40,24 @@ El jugador controla a un mono como protagonista, el cual es denominado como El E
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imagenWukong"
         android:layout_width="183dp"
         android:layout_height="238dp"
         app:srcCompat="@drawable/blackmyth"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="304dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textwukong2" />
+    <Button
+        android:id="@+id/btnWukong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click para ver más"
+        app:layout_constraintTop_toBottomOf="@+id/imagenWukong"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

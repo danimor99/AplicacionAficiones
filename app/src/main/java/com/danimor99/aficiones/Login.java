@@ -3,8 +3,13 @@ package com.danimor99.aficiones;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
 import android.widget.Toast;
 
 import com.danimor99.aficiones.databinding.ActivityAficionesBinding;
@@ -12,6 +17,7 @@ import com.danimor99.aficiones.ui.frmanager.Paginador;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -25,40 +31,32 @@ public class Login extends AppCompatActivity {
     private ActivityLoginBinding binding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick (View view){
+            String usuario = binding.usuarioLogin.getText().toString().trim();
+            String contraseña = binding.contrasenaLogin.getText().toString().trim();
+
+
+                if (usuario.equals("root") && contraseña.equals("12345")) {
+
+                    Toast.makeText(getApplicationContext(), "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(Login.this, Aficiones.class);
+                    startActivity(intent);
+                } else {
+
+                    Toast.makeText(getApplicationContext(), "Credenciales incorrectas. Prueba root 12345", Toast.LENGTH_SHORT).show();
+                }
+
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.bottom_nav_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.favButton) {
-            Toast toast = Toast.makeText(this, "¡Cómo me gustan mis aficiones!", Toast.LENGTH_SHORT);
-            toast.show();
-        }
-
-        if (id == R.id.navigation_home) {
-            Intent intent = new Intent(Login.this, Aficiones.class);
-             startActivity(intent);
-        }
-
-        if (id == R.id.myCodeButton) {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://github.com/danimor99/"));
-            startActivity(intent);
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+    });
+}
 
 }

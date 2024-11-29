@@ -51,8 +51,8 @@ public class Aficiones extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.favButton) {
-            Toast toast = Toast.makeText(this, "¡Cómo me gustan mis aficiones!", Toast.LENGTH_SHORT);
-            toast.show();
+            Intent intent = new Intent(Aficiones.this, Favoritos.class);
+            startActivity(intent);
         }
 
         if (id == R.id.aboutMeButton) {

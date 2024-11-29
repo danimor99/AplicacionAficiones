@@ -12,7 +12,7 @@
         android:id="@+id/textoJugarVideojuegos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Como me gusta jugar videojuegos"
+        android:text="Videojuegos"
         android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"

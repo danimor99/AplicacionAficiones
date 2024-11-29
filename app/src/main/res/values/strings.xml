@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Aficiones</string>
+    <string name="app_name">Walkers</string>
     <string name="title_activity_aficiones">Aficiones</string>
     <string name="tipojuegoaccion">Juego de accion/aventura</string>
     <string name="tipojuegofps">Juego de disparos en primera persona</string>
